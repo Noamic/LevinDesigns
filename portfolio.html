@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- make animation for the about text fade in after welcome -->
+    <title>Levin Designs</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <a href="home.html"><img class="logo" src="images\whiteldlogo.png" alt=""></a>
+    <div class="modal" id="modal">
+      <div class="modal-content">
+        <img src="" id="modalimg" alt="">
+        <p id="modal-text">Testing</p>
+      </div>
+    </div>
+
+    <div style="margin-top: 50px;" class="photos">
+      <img style="margin-right: 1000px;" class="photo" src="images\pic1.png" alt="" id="HOMO DEUS" onclick="show(this)">
+      <img style="margin-left: 1000px;" class="photo" src="images\pic2.png" alt="" id="ENVY" onclick="show(this)">
+      <img style="margin-right: 1000px;" class="photo" src="images\pic3.png" alt="" id="BLIND TRUST" onclick="show(this)">
+      <img style="margin-left: 1000px;" class="photo" src="images\pic4.png" alt="" id="ENTROPY" onclick="show(this)">
+      <img style="margin-right: 1000px;" class="photo" src="images\pic5.png" alt="" id="YOU'RE IT" onclick="show(this)">
+    </div>
+
+  <body>
+    <script type="text/javascript">
+      var modal = document.getElementById("modal");
+      var modalImg = document.getElementById("modalimg");
+      var modalText = document.getElementById("modal-text");
+      function show(theImg) {
+        modalImg.src = theImg.src;
+        modalText.innerHTML = theImg.id;
+        modal.style.display = "block";
+      }
+
+      window.onclick = function(event) {
+      if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      }
+    </script>
+</html>
